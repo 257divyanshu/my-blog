@@ -1,7 +1,6 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
-@layer base {
-  body {
-    @apply bg-white text-gray-900 antialiased;
-  }
+body {
+  @apply bg-white text-gray-900 antialiased;
 }
