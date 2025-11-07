@@ -5,19 +5,27 @@ export default function BlogPage() {
   const posts = getAllPosts();
 
   return (
-    <main className="mx-auto max-w-3xl p-6">
-      <h1 className="text-4xl font-bold mb-8">Blog</h1>
-
-      <ul className="space-y-4">
+    <main>
+      <h1 className="text-4xl font-bold mb-8">All Posts</h1>
+      <ul className="space-y-6">
         {posts.map((post) => (
           <li key={post.slug}>
             <Link
               href={`/blog/${post.slug}`}
-              className="text-2xl font-medium text-blue-600 hover:underline"
+              className="block group"
             >
-              {post.title}
+              <h2 className="text-2xl font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">
+                {post.title}
+              </h2>
+              <p className="text-gray-500 text-sm mt-1">
+                {post.date}
+              </p>
+              {post.description && (
+                <p className="text-gray-700 mt-2 line-clamp-2">
+                  {post.description}
+                </p>
+              )}
             </Link>
-            <p className="text-gray-500 text-sm">{post.date}</p>
           </li>
         ))}
       </ul>
