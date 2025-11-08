@@ -3,6 +3,9 @@ import "./globals.css";
 export const metadata = {
   title: "Divyanshu’s Blog",
   description: "Personal blog of Divyanshu Sahu — thoughts, notes, and experiments.",
+  icons: {
+    icon: "/favicon.svg",
+  },
 };
 
 export default function RootLayout({ children }) {
