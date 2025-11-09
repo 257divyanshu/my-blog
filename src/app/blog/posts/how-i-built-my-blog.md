@@ -71,13 +71,7 @@ src/app/blog/posts/
 I used **gray-matter** to parse the frontmatter (title, date, description)
 and **remark** + **remark-html** to convert Markdown into HTML.
 
-This makes writing new posts as simple as:
-
-```
-npm run dev
-```
-
-add a new `.md` file → and it’s live.
+Add a new `.md` file → and it’s live.
 
 ---
 
@@ -167,6 +161,7 @@ But I’ve got plans for future improvements:
 ## 🙌 Closing Thoughts
 
 If you’ve read this far — thank you 🙏
+
 This blog is something I built not just to share posts, but to share *how* I build things.
 
 I’ll be writing about my learnings, projects, and experiments — from web dev to AI — right here.

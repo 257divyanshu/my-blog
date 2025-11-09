@@ -11,8 +11,8 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="bg-white text-gray-900 antialiased leading-relaxed font-sans">
-        <div className="max-w-3xl mx-auto px-5 sm:px-6 lg:px-8 py-12">
+      <body className="bg-[#f3f4f6] text-gray-900 antialiased leading-relaxed font-sans" >
+        <div className="max-w-3xl mx-auto px-5 sm:px-6 lg:px-8 py-8">
           <header className="mb-12 border-b pb-6">
             <a href="/blog" className="text-3xl font-bold tracking-tight hover:opacity-80 transition-opacity">
               Divyanshu’s Blog

@@ -18,7 +18,11 @@ export default function BlogPage() {
                 {post.title}
               </h2>
               <p className="text-gray-500 text-sm mt-1">
-                {post.date}
+                {new Date(post.date).toLocaleDateString("en-US", {
+                  year: "numeric",
+                  month: "long",
+                  day: "numeric",
+                })}
               </p>
               {post.description && (
                 <p className="text-gray-700 mt-2 line-clamp-2">
