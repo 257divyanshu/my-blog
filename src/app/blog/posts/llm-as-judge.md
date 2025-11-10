@@ -28,28 +28,33 @@ Or:
 ### 🎨 Think of it like this diagram:
 
 ```
- ┌──────────────────┐       ┌───────────────────────────┐
- |   User Prompts   |  ---> |   LLM (to be Evaluated)   |
- └──────────────────┘       └──────────────┬────────────┘
-                                       │
+  ----------------       -------------------------
+    User Prompts    >>>    LLM (to be Evaluated)   
+  ----------------       -------------------------       
+
                                        ▼
-                             ┌──────────────────┐
-                             |  ouput given to  |
-                             |     Judge LLM    |
-                             └──────────────────┘
-                                       │
                                        ▼
-                           ┌────────────────────────┐
-                           |  Judgment / Scores /   |
-                           |  Ranking / Explanation |
-                           └────────────────────────┘
+                                       ▼
+
+                             --------------------
+                                ouput given to  
+                                   Judge LLM    
+                             --------------------
+
+                                       ▼
+                                       ▼
+                                       ▼
+
+                           --------------------------
+                              Ranking / Explanation 
+                           --------------------------
 ```
 
 So the “Judge LLM” acts like a **human evaluator**, analyzing the *content, correctness, clarity, and tone* of another model’s output.
 
 ---
 
-## 🎯 Why It’s Used (in Industry)
+## 🎯 Why It’s Used
 
 The main reasons are **scale** and **consistency**.
 
@@ -64,20 +69,20 @@ Companies like **OpenAI (Eval framework)**, **Anthropic**, **Google DeepMind**, 
 
 ---
 
-## ⚙️ How It Works (Step-by-Step)
+## ⚙️ How It Works
 
 Let’s simplify it:
 
 ### 🧩 Step 1: Collect Outputs to Evaluate
 
-You already have:
+Collect:
 
 * A *prompt*
 * One or more *model responses* (e.g., Gemini-Flash, Gemini-Pro)
 
 ### 🧩 Step 2: Create a “Judging Prompt”
 
-This is a carefully designed instruction you give to your **Judge LLM**.
+This is a carefully designed instruction that is given to the **Judge LLM**.
 
 Example:
 
@@ -93,7 +98,7 @@ Give each score from 1 to 5.
 Return your result in JSON format.
 ```
 
-Then you pass in:
+Then the prompt and the response are passed in:
 
 ```json
 {
@@ -118,8 +123,9 @@ The **Judge LLM** replies something like:
 
 ### 🧩 Step 4: Record + Analyze
 
-You save this judgment like a normal evaluation entry in your dashboard.
-Then you can:
+This judgment will be stored like a normal evaluation entry in the evaluation dashboard.
+
+After storing the records, following things can be done:
 
 * Compare models (Pro vs Flash)
 * Analyze average scores
@@ -127,14 +133,16 @@ Then you can:
 
 ---
 
-## 📊 Example Visualization (Simplified)
+## 📊 Example Visualization
 
 ```
 User Prompt: "What is photosynthesis?"
--------------------------------------------------
-Model A (Gemini-Flash): "Photosynthesis is when plants use sunlight..."
-Model B (Gemini-Pro):   "It’s the process by which plants convert light..."
--------------------------------------------------
+
+-------------------------------------------------------------------------------
+  Model A (Gemini-Flash): "Photosynthesis is when plants use sunlight..."
+  Model B (Gemini-Pro):   "It’s the process by which plants convert light..."
+-------------------------------------------------------------------------------
+
 Judge LLM says:
 Model B is more detailed and accurate.  
 Scores: A = 4.2/5 | B = 4.8/5  
@@ -156,7 +164,7 @@ So the *judge model* acts like a referee comparing two players.
 * Eliminates human bottlenecks
 * Works at scale
 * Requires a well-crafted judging prompt
-* Best used as a *complement* to human evaluation
+* Is best used as a *complement* to human evaluation
 
 ---
 

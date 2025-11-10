@@ -22,9 +22,11 @@ Think of an LLM as a **“statistical brain”** that predicts what word (or tok
 
 ```
 Input:   "Artificial intelligence is"
+
 Model:   → predicts "changing"
           → then predicts "the"
           → then predicts "world"
+
 Output:  "Artificial intelligence is changing the world."
 ```
 
@@ -38,11 +40,11 @@ The *“large”* refers to:
 * The **number of parameters** — think of parameters as tiny “knobs” or “dials” that the model tunes during training to adjust how it understands language patterns. GPT-4 and Gemini have **hundreds of billions** of parameters!
 
 ```
-           +-----------------------------------+
-Data  ---> | billions of sentences, books, web |
-           +-----------------------------------+
-             ↓  ↓  ↓  ↓  ↓
-       billions of internal parameters
+            -------------------------------------
+Data  >>>>    billions of sentences, books, web  
+            -------------------------------------
+                       ↓  ↓  ↓  ↓  ↓
+               billions of internal parameters
 ```
 
 Each parameter adjusts slightly during training to help the model understand relationships between words, meaning, and context.
@@ -54,9 +56,10 @@ Each parameter adjusts slightly during training to help the model understand rel
 Let’s simplify the pipeline into **3 stages:**
 
 ```
-         ┌───────────────────────────────┐
-         │     Stage 1: Tokenization     │
-         └───────────────────────────────┘
+-------------------------
+  Stage 1: Tokenization    
+-------------------------
+
 Input text is broken into smaller units (tokens).
 
 "Hello world!" → ["Hello", " world", "!"]
@@ -64,9 +67,10 @@ Input text is broken into smaller units (tokens).
 ```
 
 ```
-         ┌──────────────────────────────────────────┐
-         │     Stage 2: Encoding (Understanding)    │
-         └──────────────────────────────────────────┘
+-------------------------------------
+  Stage 2: Encoding (Understanding)  
+-------------------------------------
+
 Each token becomes a vector — a list of numbers that captures meaning.
 
 "Hello" → [0.1, 0.9, -0.3, 0.4, ...]
@@ -75,9 +79,10 @@ These vectors go into a neural network (Transformer) that learns relationships.
 ```
 
 ```
-         ┌────────────────────────────────────────┐
-         │     Stage 3: Decoding (Generation)     │
-         └────────────────────────────────────────┘
+----------------------------------
+  Stage 3: Decoding (Generation)  
+----------------------------------
+
 The model predicts the next token based on previous ones:
 
 Input: "The sky is"
@@ -153,24 +158,27 @@ So researchers use multiple approaches:
 We can group LLM evaluation into **three main families**:
 
 ```
-┌────────────────────────────┐
-│  1️⃣ Human Evaluation      
-│     - Humans rate outputs   
-│     - Very reliable         
-│     - Slow & costly         
-└────────────────────────────┘
-┌────────────────────────────┐
-│  2️⃣ Automated Metrics     
-│     - Scores via formulas   
-│     - Fast & reproducible    
-│     - May miss nuance       
-└────────────────────────────┘
-┌────────────────────────────────┐
-│  3️⃣ Model-based Evaluation 
-│     - LLM judges another LLM
-│     - Scalable & modern       
-│     - Needs careful prompt   
-└────────────────────────────────┘
+-----------------------------
+  1️⃣ Human Evaluation    
+     - Humans rate outputs   
+     - Very reliable         
+     - Slow & costly         
+-----------------------------
+
+-----------------------------
+  2️⃣ Automated Metrics     
+     - Scores via formulas   
+     - Fast & reproducible    
+     - May miss nuance       
+-----------------------------
+
+--------------------------------
+  3️⃣ Model-based Evaluation 
+     - LLM judges another LLM
+     - Scalable & modern       
+     - Needs careful prompt   
+--------------------------------
+
 ```
 
 

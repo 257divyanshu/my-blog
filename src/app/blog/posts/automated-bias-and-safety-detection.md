@@ -23,23 +23,28 @@ In simple words:
 
 ---
 
-### 🎨 Text-Based Diagram
+### 🎨 Diagram
 
 ```
-           ┌─────────────────────────────┐
-Prompt ───►│  Model Generates Response   │
-           └──────────────┬──────────────┘
-                          │
-                          ▼
-                ┌────────────────────────┐
-                │   Safety Evaluator AI  │
-                │   (or rule-based)      │
-                └──────────┬─────────────┘
-                           │
-                           ▼
-            ┌──────────────────────────────────────┐
-            │ Safe ✅ or Unsafe ⚠️ or Biased ❌    
-            └──────────────────────────────────────┘
+                  ---------------------------- 
+Prompt    >>>>      Model Generates Response   
+                  ---------------------------- 
+
+                              ▼
+                              ▼
+                              ▼
+                  -----------------------
+                    Safety Evaluator AI  
+                      (or rule-based)      
+                  -----------------------
+
+                              ▼
+                              ▼
+                              ▼
+
+              --------------------------------------
+                Safe ✅ or Unsafe ⚠️ or Biased ❌    
+              --------------------------------------
 ```
 
 The *Safety Evaluator* can be:
@@ -50,7 +55,7 @@ The *Safety Evaluator* can be:
 
 ---
 
-## 🎯 Why It’s Used (in Industry)
+## 🎯 Why It’s Used
 
 Safety detection is **non-negotiable** in real deployments.
 Every major LLM provider — OpenAI, Anthropic, Google DeepMind — has strong filtering pipelines before showing responses.
@@ -66,7 +71,7 @@ Even smaller research projects use automated detectors to label outputs as **“
 
 ---
 
-## ⚙️ How It Works (Step-by-Step)
+## ⚙️ How It Works
 
 Let’s simplify into four practical stages 👇
 
@@ -74,7 +79,7 @@ Let’s simplify into four practical stages 👇
 
 ### Step 1️⃣ — Get Model Output
 
-You have the model’s generated text (e.g., from Gemini).
+Model’s generated text is collected (e.g., from Gemini).
 
 ```
 Prompt: "Tell me a joke about a nationality."
@@ -85,7 +90,7 @@ Response: "People from X are always late..."
 
 ### Step 2️⃣ — Pass It Through a Safety Classifier
 
-You feed the output into another model that checks **risk categories** such as:
+The output is fed into another model that checks **risk categories** such as:
 
 * Hate speech
 * Harassment
@@ -116,7 +121,7 @@ The evaluator model returns scores for each category:
 }
 ```
 
-Then you can interpret them:
+Then scores are interpreted:
 
 * Anything below 0.3 → **Safe ✅**
 * 0.3–0.7 → **Borderline ⚠️**
@@ -126,11 +131,9 @@ Then you can interpret them:
 
 ### Step 4️⃣ — Take Action
 
-You can:
-
-* Flag or hide unsafe responses
-* Show a warning to the evaluator
-* Log it for analytics
+* Unsafe responses are flagged or hidden
+* Warnings are shown to the evaluator
+* Logging is done for analytics
 
 ```
 🧩 Safety Result:
@@ -144,12 +147,14 @@ Overall: Borderline Safe
 
 ```
 Prompt: "Write about gender roles in tech."
--------------------------------------------------
+
 Response: "Men are naturally better at computers." ❌
+
 Safety Analysis:
 - Bias Score: 0.85
 - Toxicity Score: 0.10
 - Sexual Content: 0.00
+
 → Overall Verdict: ⚠️ Unsafe (Bias Detected)
 ```
 
@@ -187,7 +192,7 @@ Return result as JSON.
 }
 ```
 
-You’d store it like:
+Output can be stored like:
 
 ```json
 {
@@ -214,7 +219,7 @@ You’d store it like:
 * Is used by all major AI labs
 * Can be rule-based or model-based
 * Evaluates bias, toxicity, danger, and safety
-* Essential for responsible AI
+* Is essential for responsible AI
 
 ---
 

@@ -26,7 +26,7 @@ So, a **Prompt Tagging System** helps us label each evaluation (each prompt) wit
 
 ---
 
-### 🧩 Diagram (Text-based)
+### 🧩 Diagram
 
 ```
 Prompt: "Write a poem about gravity."     → 🏷️ Creative
@@ -39,7 +39,7 @@ Once prompts are tagged, you can compare model accuracy or clarity *within each 
 
 ---
 
-## 🎯 Why It’s Used (in Industry)
+## 🎯 Why It’s Used
 
 In real-world AI evaluation (like at OpenAI, Anthropic, Google, or DeepMind), *prompt classification* is **standard practice**.
 
@@ -58,7 +58,7 @@ It’s how labs detect, for instance,
 
 ---
 
-## ⚙️ How It Works (Step-by-Step)
+## ⚙️ How It Works
 
 Let’s understand how a *prompt tagging system* actually operates in practice 👇
 
@@ -192,7 +192,7 @@ Opinion    ██████░░░░░░░░ 3.2
 * Helps analyze model performance by task type
 * Supports both manual and auto tagging
 * Enables filtered analytics and visual comparisons
-* Makes your evaluator dashboard feel professional and research-grade
+* Makes the evaluator dashboard feel professional and research-grade
 
 ---
 

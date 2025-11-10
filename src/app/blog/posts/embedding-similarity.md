@@ -24,14 +24,14 @@ Think of it like this:
 "Car" → [0.1, 0.8, 0.2]
 ```
 
-If you plot them in space (imagine a 3D map),
+If we plot them in space (imagine a 3D map),
 “Dog” and “Cat” will be **closer** to each other than to “Car”.
 
 That’s *semantic similarity* — “dog” and “cat” are conceptually closer.
 
 ---
 
-### 🧩 Diagram (Text-based)
+### 🧩 Diagram
 
 ```
          🐶 Dog ●
@@ -47,7 +47,7 @@ That’s *semantic similarity* — “dog” and “cat” are conceptually clos
 
 ---
 
-## 🎯 Why It’s Used (in Industry)
+## 🎯 Why It’s Used
 
 Embedding similarity is **everywhere** in LLM evaluation and retrieval systems.
 It’s used to automatically check *how close an AI’s answer is to a correct or reference answer.*
@@ -63,7 +63,7 @@ Big companies (OpenAI, Google, Anthropic) use embedding-based metrics like **BER
 
 ---
 
-## ⚙️ How It Works (Step-by-Step)
+## ⚙️ How It Works
 
 Let’s simplify this into four steps:
 
@@ -71,7 +71,7 @@ Let’s simplify this into four steps:
 
 ### 🧩 Step 1: Get Embeddings for Each Text
 
-You use an embedding model (like `text-embedding-004` from Gemini or OpenAI’s `text-embedding-3-small`) to convert both:
+An embedding model (like `text-embedding-004` from Gemini or OpenAI’s `text-embedding-3-small`) is used to convert both:
 
 * Reference text (ground truth or ideal answer)
 * Candidate text (model’s output)
@@ -88,7 +88,7 @@ Model Answer     → Embedding B
 
 ### 🧩 Step 2: Compute Cosine Similarity
 
-We now calculate the **angle** between these two vectors — called *cosine similarity*.
+The **angle** between these two vectors — called *cosine similarity* — is calculated.
 
 If two embeddings point in the same direction → similarity is **close to 1**.
 If they are opposite → similarity is **close to -1**.
@@ -97,7 +97,7 @@ If they are opposite → similarity is **close to -1**.
 cosine_similarity = (A · B) / (||A|| * ||B||)
 ```
 
-(You don’t have to calculate it manually — libraries handle this.)
+(They aren't calculated manually — libraries handle it.)
 
 ---
 
@@ -115,7 +115,7 @@ cosine_similarity = (A · B) / (||A|| * ||B||)
 
 ### 🧩 Step 4: Store and Visualize
 
-You store the similarity score in your evaluation record:
+Similarity scores are stored in the evaluation record:
 
 ```json
 {
@@ -126,7 +126,7 @@ You store the similarity score in your evaluation record:
 }
 ```
 
-Then you can visualize it in your Analytics Dashboard as a new metric.
+Now these scores can be visualized in the Analytics Dashboard as a new metric.
 
 ---
 
@@ -134,7 +134,9 @@ Then you can visualize it in your Analytics Dashboard as a new metric.
 
 ```
 Prompt: "What is the capital of Japan?"
+
 Reference: "Tokyo"
+
 Model A Output: "Tokyo" → Similarity: 1.00 ✅
 Model B Output: "Osaka" → Similarity: 0.42 ❌
 ```
@@ -151,8 +153,8 @@ Model B Output: "Osaka" → Similarity: 0.42 ❌
 
 * Works on *meaning*, not words.
 * Uses *cosine similarity* to measure closeness.
-* Easy to compute using embedding APIs.
-* Great for factual, QA, or summarization tasks.
+* Is easy to compute using embedding APIs.
+* Is great for factual, QA, or summarization tasks.
 
 ---
 

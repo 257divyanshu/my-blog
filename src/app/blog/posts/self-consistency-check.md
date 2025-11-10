@@ -23,16 +23,17 @@ This test doesn’t measure correctness directly — it measures **stability** o
 
 ---
 
-### 🧩 Diagram (Text-based)
+### 🧩 Diagram
 
 ```
 Prompt: "Explain gravity in one line."
 
-┌────────────────────────────────────────────────────────────┐
-│ Model Run 1 → "Gravity pulls things toward Earth."         │
-│ Model Run 2 → "Gravity is a force that attracts objects."  │
-│ Model Run 3 → "It's a force that pulls everything down."   │
-└────────────────────────────────────────────────────────────┘
+--------------------------------------------------------------
+  Model Run 1 → "Gravity pulls things toward Earth."         
+  Model Run 2 → "Gravity is a force that attracts objects."  
+  Model Run 3 → "It's a force that pulls everything down."  
+--------------------------------------------------------------
+
 
 Now we compare all three.
 If they’re similar → ✅ High consistency
@@ -41,7 +42,7 @@ If they differ wildly → ⚠️ Low consistency
 
 ---
 
-## 🎯 Why It’s Used (in Industry)
+## 🎯 Why It’s Used
 
 LLMs like Gemini, GPT-4, and Claude are **probabilistic** — meaning they can produce *different valid answers* each time.
 This randomness (called *temperature*) helps creativity but hurts reliability.
@@ -59,19 +60,19 @@ So, researchers and companies use self-consistency checks to:
 
 ---
 
-## ⚙️ How It Works (Step-by-Step)
+## ⚙️ How It Works 
 
 Let’s simplify:
 
 ### Step 1️⃣ — Choose a Prompt
 
-Pick the same question, e.g.
+A question is picked, e.g.
 
 > What is the capital of France?
 
 ### Step 2️⃣ — Generate Multiple Outputs
 
-Ask the model 3–5 times (with some temperature, like 0.7).
+Model is asked the same question 3–5 times (with some temperature, like 0.7).
 
 | Run | Model Output                      |
 | --- | --------------------------------- |
@@ -85,9 +86,9 @@ Ask the model 3–5 times (with some temperature, like 0.7).
 
 ### Step 3️⃣ — Compare Outputs
 
-Now we check how *similar* these outputs are to one another.
+Now 'how *similar* these outputs are to one another' is checked.
 
-We can use:
+Following methods can be used:
 
 * **String Similarity** (e.g., Levenshtein distance)
 * **Semantic Similarity** (embedding cosine similarity)
@@ -102,13 +103,13 @@ If one says “Lyon,”
 
 ### Step 4️⃣ — Compute a “Consistency Score”
 
-You can define:
+Consistency is defined. For example this definition can be chosen:
 
 ```
 Consistency = Average pairwise similarity between all runs
 ```
 
-If you had 5 runs, you compare all pairs and take their average similarity.
+All pairs are compared and their average similarity is calculated.
 
 | Runs Compared | Similarity |
 | ------------- | ---------- |
@@ -142,12 +143,13 @@ Run 3 → "William Shakespeare"
 Run 4 → "Charles Dickens" ⚠️
 Run 5 → "Shakespeare"
 
--------------------------------------------------
+------------------------------
+
 Self-Consistency Score: 0.82
 (4 consistent, 1 inconsistent)
 ```
 
-Graphically in your dashboard, it can look like:
+Graphically in the dashboard, it can look like:
 
 ```
 🧩 Self-Consistency: █████████░░ 82%
@@ -166,7 +168,7 @@ Graphically in your dashboard, it can look like:
 * Checks *stability*, not correctness
 * Is easy to compute using embedding similarity
 * Helps detect reasoning drift
-* Widely used in reasoning benchmarks and chain-of-thought research
+* Is widely used in reasoning benchmarks and chain-of-thought research
 
 ---
 
