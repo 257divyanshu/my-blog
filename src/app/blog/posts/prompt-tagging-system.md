@@ -1,13 +1,15 @@
 ---
-title: LLM Evaluation Technique 5 — Prompt Tagging System
+title: LLM Evaluation Technique 5 (Prompt Tagging System)
 date: 2025-11-09T18:00:00
-description: Learn how a prompt tagging system categorizes AI evaluations by task type — enabling deeper insights into where models excel or struggle.
+description: Learn how a prompt tagging system categorizes AI evaluations by task type, enabling deeper insights into where models excel or struggle.
 ---
 
 Welcome to my blog 👋
 
-Not all prompts are created equal — some test creativity, others logic or factual recall.
-That’s where a Prompt Tagging System comes in. It labels each prompt by category (like reasoning, creative, or factual) so you can see exactly how an AI model performs across different types of tasks.
+Not all prompts are created equal, some test creativity, others logic or factual recall.
+That’s where a Prompt Tagging System comes in. 
+
+It labels each prompt by category (like reasoning, creative, or factual) so you can see exactly how an AI model performs across different types of tasks.
 
 In this post, we’ll explore how tagging transforms evaluations into deeper insights.
 
@@ -22,7 +24,7 @@ For example:
 * But struggle at **creative writing**,
 * And slightly inconsistent in **reasoning** or **math**.
 
-So, a **Prompt Tagging System** helps us label each evaluation (each prompt) with one or more **categories (tags)** — so we can analyze how the model performs per *type of task*.
+So, a **Prompt Tagging System** helps us label each evaluation (each prompt) with one or more **categories (tags)**, so we can analyze how the model performs per *type of task*.
 
 ---
 
@@ -64,7 +66,7 @@ Let’s understand how a *prompt tagging system* actually operates in practice �
 
 ---
 
-### Step 1️⃣ — Defining Tag Categories
+### Step 1️⃣: Defining Tag Categories
 
 Every prompt can belong to one or more **categories** based on its intent or task type.
 Before tagging begins, a small set of broad categories is defined.
@@ -81,7 +83,7 @@ These categories can later expand as more prompts and use cases emerge.
 
 ---
 
-### Step 2️⃣ — Tagging the Prompts
+### Step 2️⃣: Tagging the Prompts
 
 Each prompt is then **labeled with one or more tags** that best describe its nature.
 Tags can be added manually by a human evaluator or automatically by an AI model.
@@ -96,13 +98,13 @@ In a dashboard or evaluation interface, prompts often include a small **multi-se
 
 ---
 
-### Step 3️⃣ — Auto-Tagging (Optional)
+### Step 3️⃣: Auto-Tagging (Optional)
 
 In more advanced systems, tagging is performed **automatically** by another AI model.
 The model reads the prompt, understands its intent, and assigns appropriate tags such as “Reasoning,” “Creative,” or “Ethical.”
 
 This process is known as **auto-tagging** and helps handle large-scale datasets efficiently.
-For example, when evaluating thousands of prompts, an AI classifier (like Gemini or GPT) can automatically predict which categories each belongs to — saving human time and ensuring consistency.
+For example, when evaluating thousands of prompts, an AI classifier (like Gemini or GPT) can automatically predict which categories each belongs to,  saving human time and ensuring consistency.
 
 #### Example Judging Prompt
 
@@ -125,7 +127,7 @@ You save those as part of your evaluation entry.
 
 ---
 
-### Step 4️⃣ — Analyzing Model Performance by Tag
+### Step 4️⃣: Analyzing Model Performance by Tag
 
 Once every prompt is tagged, those tags become incredibly useful for **deep-dive analytics**.
 Instead of seeing just an overall “average accuracy,” evaluators can now understand *how well the model performs across different categories of prompts.*
@@ -146,7 +148,7 @@ It’s the kind of insight researchers use when fine-tuning or comparing LLMs.
 
 ---
 
-### Step 5️⃣ — Filtering and Comparative Evaluation
+### Step 5️⃣: Filtering and Comparative Evaluation
 
 With tags in place, evaluators can also **filter** the results to focus on a specific task type.
 For instance, one could view only **Reasoning** prompts, or only **Creative** ones, and study the model’s consistency, safety, or bias patterns within those contexts.
@@ -183,9 +185,8 @@ Opinion    ██████░░░░░░░░ 3.2
 ## ✍️ Summary
 
 
-> Not all prompts are created equal.
 > A *Prompt Tagging System* helps categorize model inputs (factual, creative, reasoning, etc.) so developers can analyze where their AI performs best or needs improvement.
-> It enables fine-grained, interpretable insights — the kind real AI labs use for model tuning and bias detection.
+> It enables fine-grained, interpretable insights that real AI labs use for model tuning and bias detection.
 
 **The Prompt Tagging System technique:**
 
@@ -198,7 +199,7 @@ Opinion    ██████░░░░░░░░ 3.2
 
 Thanks for reading till the end! 🙏
 
-A Prompt Tagging System adds structure and clarity to evaluations — turning raw prompts into meaningful analytics.
+A Prompt Tagging System adds structure and clarity to evaluations, turning raw prompts into meaningful analytics.
 With it, evaluators can finally answer questions like “Where does this model shine, and where does it struggle?”
 
 In the next article, we’ll wrap up this series by connecting all five evaluation techniques into a single, cohesive AI evaluation workflow.

@@ -1,13 +1,15 @@
 ---
-title: LLM Evaluation Technique 3 — Self-Consistency Check
+title: LLM Evaluation Technique 3 (Self-Consistency Check)
 date: 2025-11-09T14:00:00
-description: Learn how the self-consistency check evaluates an AI model’s stability by testing if it gives consistent answers across repeated runs.
+description: Learn to evaluate an AI model’s stability by testing if it gives consistent answers across repeated runs, using the Self-Consistency Check.
 ---
 
 Welcome to my blog 👋
 
 Ever noticed how an AI might give slightly different answers each time you ask the same question?
-That’s where the Self-Consistency Check comes in — a simple but powerful technique to test how stable and reliable a model’s reasoning really is.
+That’s where the Self-Consistency Check comes in.
+
+It is a simple but powerful technique to test how stable and reliable a model’s reasoning really is.
 
 In this post, we’ll explore how consistency reveals an AI’s confidence in its own logic.
 
@@ -19,7 +21,7 @@ In this post, we’ll explore how consistency reveals an AI’s confidence in it
 > If an AI is truly confident in its knowledge,
 > it should not contradict itself across repeated runs.
 
-This test doesn’t measure correctness directly — it measures **stability** of reasoning and output patterns.
+This test doesn’t measure correctness directly, it measures **stability** of reasoning and output patterns.
 
 ---
 
@@ -44,7 +46,7 @@ If they differ wildly → ⚠️ Low consistency
 
 ## 🎯 Why It’s Used
 
-LLMs like Gemini, GPT-4, and Claude are **probabilistic** — meaning they can produce *different valid answers* each time.
+LLMs like Gemini, GPT-4, and Claude are **probabilistic** (they can produce *different valid answers* each time).
 This randomness (called *temperature*) helps creativity but hurts reliability.
 
 So, researchers and companies use self-consistency checks to:
@@ -64,13 +66,13 @@ So, researchers and companies use self-consistency checks to:
 
 Let’s simplify:
 
-### Step 1️⃣ — Choose a Prompt
+### Step 1️⃣: Choose a Prompt
 
 A question is picked, e.g.
 
 > What is the capital of France?
 
-### Step 2️⃣ — Generate Multiple Outputs
+### Step 2️⃣: Generate Multiple Outputs
 
 Model is asked the same question 3–5 times (with some temperature, like 0.7).
 
@@ -84,7 +86,7 @@ Model is asked the same question 3–5 times (with some temperature, like 0.7).
 
 ---
 
-### Step 3️⃣ — Compare Outputs
+### Step 3️⃣: Compare Outputs
 
 Now 'how *similar* these outputs are to one another' is checked.
 
@@ -101,7 +103,7 @@ If one says “Lyon,”
 
 ---
 
-### Step 4️⃣ — Compute a “Consistency Score”
+### Step 4️⃣: Compute a “Consistency Score”
 
 Consistency is defined. For example this definition can be chosen:
 
@@ -121,7 +123,7 @@ All pairs are compared and their average similarity is calculated.
 
 ---
 
-### Step 5️⃣ — Interpret
+### Step 5️⃣: Interpret
 
 | Score   | Meaning             |
 | ------- | ------------------- |
@@ -161,6 +163,7 @@ Graphically in the dashboard, it can look like:
 
 > Large language models sometimes change their answers from one run to the next.
 > The *self-consistency check* measures how stable a model’s reasoning is by asking the same question multiple times and comparing the results.
+
 > Consistent answers mean the model is reliable; inconsistent ones suggest uncertainty or randomness in its logic.
 
 **The Self-Consistency Check technique:**
@@ -174,8 +177,8 @@ Graphically in the dashboard, it can look like:
 
 Thanks for reading till the end! 🙏
 
-The Self-Consistency Check helps us peek inside an AI’s decision-making — showing whether it stands by its answers or changes its mind too easily.
+The Self-Consistency Check helps us peek inside an AI’s decision-making, showing whether it stands by its answers or changes its mind too easily.
 
-In the next article, we’ll dive deeper into an evaluation technique that detects bias, toxicity, and unsafe content — **Automated Bias & Safety Detection**.
+In the next article, we’ll dive deeper into an evaluation technique that detects bias, toxicity, and unsafe content (**Automated Bias & Safety Detection**).
 
 **See you in the next post 👋**

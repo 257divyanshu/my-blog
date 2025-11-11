@@ -1,13 +1,15 @@
 ---
-title: LLM Evaluation Technique 4 — Automated Bias & Safety Detection
+title: LLM Evaluation Technique 4 (Automated Bias & Safety Detection)
 date: 2025-11-09T16:00:00
-description: Explore how automated systems and LLMs detect bias, toxicity, and unsafe content — ensuring AI models stay fair, trustworthy, and compliant.
+description: Explore how automated systems and LLMs detect bias, toxicity, and unsafe content, ensuring AI models stay fair, trustworthy, and compliant.
 ---
 
 Welcome to my blog 👋
 
 Before any AI system goes public, it must prove it’s safe and fair.
-That’s where Automated Bias and Safety Detection comes in — using algorithms or other language models to scan outputs for harmful, biased, or unsafe content.
+That’s where Automated Bias and Safety Detection comes in.
+
+It uses algorithms or other language models to scan outputs for harmful, biased, or unsafe content.
 
 In this post, we’ll see how this technique helps keep AI trustworthy and aligned with human values.
 
@@ -15,7 +17,7 @@ In this post, we’ll see how this technique helps keep AI trustworthy and align
 
 ## 🧠 Concept Overview
 
-**Automated Bias and Safety Detection** means using algorithms (or even another LLM) to automatically check if a model’s output is **toxic, biased, or unsafe** — without needing human moderators to read everything.
+**Automated Bias and Safety Detection** means using algorithms (or even another LLM) to automatically check if a model’s output is **toxic, biased, or unsafe**, without needing human moderators to read everything.
 
 In simple words:
 
@@ -58,7 +60,7 @@ The *Safety Evaluator* can be:
 ## 🎯 Why It’s Used
 
 Safety detection is **non-negotiable** in real deployments.
-Every major LLM provider — OpenAI, Anthropic, Google DeepMind — has strong filtering pipelines before showing responses.
+Every major LLM provider (like OpenAI, Anthropic, Google DeepMind) has strong filtering pipelines before showing responses.
 
 | Goal              | Why It Matters                          |
 | ----------------- | --------------------------------------- |
@@ -77,7 +79,7 @@ Let’s simplify into four practical stages 👇
 
 ---
 
-### Step 1️⃣ — Get Model Output
+### Step 1️⃣: Get Model Output
 
 Model’s generated text is collected (e.g., from Gemini).
 
@@ -88,7 +90,7 @@ Response: "People from X are always late..."
 
 ---
 
-### Step 2️⃣ — Pass It Through a Safety Classifier
+### Step 2️⃣: Pass It Through a Safety Classifier
 
 The output is fed into another model that checks **risk categories** such as:
 
@@ -107,7 +109,7 @@ There are two main approaches 👇
 
 ---
 
-### Step 3️⃣ — Assign Safety Scores
+### Step 3️⃣: Assign Safety Scores
 
 The evaluator model returns scores for each category:
 
@@ -129,7 +131,7 @@ Then scores are interpreted:
 
 ---
 
-### Step 4️⃣ — Take Action
+### Step 4️⃣: Take Action
 
 * Unsafe responses are flagged or hidden
 * Warnings are shown to the evaluator
@@ -211,6 +213,7 @@ Output can be stored like:
 ## ✍️ Summary
 
 > Before releasing an AI system, developers must ensure it doesn’t produce harmful or unfair outputs.
+
 > Automated bias and safety detection systems use rule-based or AI-based classifiers to analyze model responses for toxicity, bias, and danger.
 > This ensures large language models stay trustworthy and compliant at scale.
 
@@ -225,9 +228,9 @@ Output can be stored like:
 
 Thanks for reading till the end! 🙏
 
-Safety isn’t just a feature — it’s the foundation of responsible AI.
+Safety isn’t just a feature, it’s the foundation of responsible AI.
 By automating bias and safety checks, we can build systems that are not only powerful but also fair and respectful to everyone.
 
-In the next article, we’ll dive deeper into an evaluation technique that categorizes AI evaluations by task type — **Prompt Tagging System**.
+In the next article, we’ll dive deeper into an evaluation technique that categorizes AI evaluations by task type (**Prompt Tagging System**).
 
 **See you in the next post 👋**

@@ -1,23 +1,23 @@
 ---
-title: LLM Evaluation Technique 1 — LLM-as-a-Judge
+title: LLM Evaluation Technique 1 (LLM-as-a-Judge)
 date: 2025-11-09T10:00:00
-description: Discover how one AI model can evaluate another using the “LLM-as-a-Judge” approach — a scalable, automated technique that powers modern AI testing and benchmarks.
+description: Discover how one AI model can evaluate another using the “LLM-as-a-Judge” approach (a scalable, automated technique that powers modern AI testing and benchmarks).
 ---
 
 Welcome to my blog 👋
 
 If you’ve ever wondered how companies like OpenAI or Google test the quality of their AI models, this post is for you.
 
-Today, we’ll explore the fascinating concept of “LLM-as-a-Judge” — where one language model acts as a judge to evaluate another, making large-scale testing faster and more consistent.
+Today, we’ll explore the fascinating concept of “LLM-as-a-Judge”, where one language model acts as a judge to evaluate another, making large-scale testing faster and more consistent.
 
-## 🧠 Concept Overview
+## 📝 Concept Overview
 
 **LLM-as-a-Judge** means:
-instead of a *human* rating AI outputs for quality, we ask **another LLM** (like Gemini or GPT-4) to be the **evaluator** — the “judge.”
+instead of a *human* rating AI outputs for quality, we ask **another LLM** (like Gemini or GPT-4) to be the **evaluator** (the “judge”).
 
 It’s like saying:
 
-> Hey AI, here are two answers to the same question — which one is better and why?
+> Hey AI, here are two answers to the same question. Which one is better and why?
 
 Or:
 
@@ -73,14 +73,14 @@ Companies like **OpenAI (Eval framework)**, **Anthropic**, **Google DeepMind**, 
 
 Let’s simplify it:
 
-### 🧩 Step 1: Collect Outputs to Evaluate
+### Step 1️⃣: Collect Outputs to Evaluate
 
-Collect:
+First of all, the followinga are collected:
 
 * A *prompt*
 * One or more *model responses* (e.g., Gemini-Flash, Gemini-Pro)
 
-### 🧩 Step 2: Create a “Judging Prompt”
+### Step 2️⃣: Create a “Judging Prompt”
 
 This is a carefully designed instruction that is given to the **Judge LLM**.
 
@@ -107,7 +107,7 @@ Then the prompt and the response are passed in:
 }
 ```
 
-### 🧩 Step 3: Get the Judge’s Evaluation
+### Step 3️⃣: Get the Judge’s Evaluation
 
 The **Judge LLM** replies something like:
 
@@ -121,9 +121,9 @@ The **Judge LLM** replies something like:
 }
 ```
 
-### 🧩 Step 4: Record + Analyze
+### Step 4️⃣: Record + Analyze
 
-This judgment will be stored like a normal evaluation entry in the evaluation dashboard.
+This judgment is stored like a normal evaluation entry in the evaluation dashboard.
 
 After storing the records, following things can be done:
 
@@ -156,7 +156,10 @@ So the *judge model* acts like a referee comparing two players.
 ## ✍️ Summary 
 
 > Evaluating large language models manually is expensive and slow.
+
+
 > “LLM-as-a-Judge” is a modern approach where one language model is tasked with evaluating another. It rates accuracy, clarity, and helpfulness — just like a human evaluator.
+
 > This approach powers many industry benchmarks and allows rapid, scalable quality testing of AI systems.
 
 **The LLM-as-a-Judge technique:**
@@ -172,6 +175,6 @@ Thanks for reading till the end! 🙏
 
 The idea of LLMs judging other LLMs might sound futuristic, but it’s already shaping how AI models are refined and compared.
 
-In the next article, we’ll dive deeper into an evaluation technique that helps evaluate AI by comparing meanings — **Embedding Similarity**.
+In the next article, we’ll dive deeper into an evaluation technique that helps evaluate AI by comparing meanings (**Embedding Similarity**).
 
 **See you in the next post 👋**

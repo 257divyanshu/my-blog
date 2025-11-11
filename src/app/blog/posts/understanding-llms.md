@@ -1,14 +1,15 @@
 ---
-title: Understanding Large Language Models (LLMs) — The Brains Behind AI
+title: Understanding LLMs (The Brains Behind AI)
 date: 2025-11-08
-description: A beginner-friendly guide to how Large Language Models (LLMs) work — from tokenization to evaluation — and why they’re the brains behind modern AI.
+description: A beginner-friendly guide to how Large Language Models (LLMs) work. From tokenization to evaluation, and why they’re the brains behind modern AI.
 ---
 
 Welcome to my blog 👋
 
-If you’ve ever wondered how ChatGPT seems to “understand” you — this post is for you.
+If you’ve ever wondered how ChatGPT seems to “understand” you, this post is for you.
 
-Behind tools like ChatGPT, Gemini, Claude, and Copilot are Large Language Models (LLMs) — powerful AI systems that can understand and generate human language.
+Behind tools like ChatGPT, Gemini, Claude, and Copilot are Large Language Models (LLMs), the powerful AI systems that can understand and generate human language.
+
 Let’s explore what makes them so capable, and how they’re evaluated to ensure they work reliably.
 
 ---
@@ -16,7 +17,8 @@ Let’s explore what makes them so capable, and how they’re evaluated to ensur
 ## 🏁 What Is an LLM?
 
 A **Large Language Model (LLM)** is an AI system trained to **understand and generate human language**.
-You’ve already interacted with many — ChatGPT, Gemini, Claude, Copilot — they’re all LLMs.
+
+You’ve already interacted with many: ChatGPT, Gemini, Claude, Copilot. They’re all LLMs.
 
 Think of an LLM as a **“statistical brain”** that predicts what word (or token) should come next in a sentence, based on everything it’s seen so far.
 
@@ -37,7 +39,9 @@ Output:  "Artificial intelligence is changing the world."
 The *“large”* refers to:
 
 * The **amount of data** it’s trained on (hundreds of billions of words)
-* The **number of parameters** — think of parameters as tiny “knobs” or “dials” that the model tunes during training to adjust how it understands language patterns. GPT-4 and Gemini have **hundreds of billions** of parameters!
+* The **number of parameters**: Think of parameters as tiny “knobs” or “dials” that the model tunes during training to adjust how it understands language patterns.
+
+GPT-4 and Gemini have **hundreds of billions** of parameters!
 
 ```
             -------------------------------------
@@ -71,7 +75,7 @@ Input text is broken into smaller units (tokens).
   Stage 2: Encoding (Understanding)  
 -------------------------------------
 
-Each token becomes a vector — a list of numbers that captures meaning.
+Each token becomes a vector (a list of numbers that captures meaning).
 
 "Hello" → [0.1, 0.9, -0.3, 0.4, ...]
 
@@ -90,16 +94,15 @@ Input: "The sky is"
 → output: "The sky is blue"
 ```
 
-That’s how every chatbot answer is built — **one token at a time**, extremely fast.
+That’s how every chatbot answer is built, **one token at a time**, extremely fast.
 
 ---
 
 ## 🧠 Why LLMs Are So Capable?
 
-Because they’ve *seen* almost everything humans have written online —
-and they’ve learned **patterns of reasoning, style, and structure**.
+Because they’ve *seen* almost everything humans have written online and they’ve learned **patterns of reasoning, style, and structure**.
 
-They don’t “think” like humans — they “guess” extremely well based on context.
+They don’t “think” like humans, they “guess” extremely well based on context.
 That’s why they can:
 
 * Write essays, code, and stories
@@ -111,15 +114,15 @@ That’s why they can:
 
 ## ⚖️ Why Evaluate LLMs?
 
-LLMs are powerful — but they’re not perfect.
-They can:
+LLMs are powerful, but they’re not perfect.
 
+They can:
 * Make up facts (hallucinate)
 * Be biased
 * Miss key context
 * Give inconsistent answers
 
-So, just like humans are tested in exams, **LLMs must be tested** before being trusted — that’s where *evaluation techniques* come in.
+So, just like humans are tested in exams, **LLMs must be tested** before being trusted. That’s where *evaluation techniques* come in.
 
 ---
 
@@ -143,7 +146,7 @@ Output B:
 > A glowing companion of the night sky, the moon inspires poets...
 
 Which one is “better”?
-There’s no single correct answer — that’s why evaluation is hard.
+There’s no single correct answer. That’s why evaluation is hard.
 
 So researchers use multiple approaches:
 
@@ -187,7 +190,9 @@ We can group LLM evaluation into **three main families**:
 ## ✍️ Summary:
 
 > Large Language Models are statistical engines trained on vast text data to predict the next word.
-> They don’t “think” — they pattern-match extremely well.
+
+> They don’t “think”, they pattern-match extremely well.
+
 > Their creativity and inconsistency make evaluation challenging, leading to sophisticated testing techniques.
 
 **Key takeaway diagram:**
@@ -201,6 +206,7 @@ Prompt → Tokenize → Encode → Generate → Evaluate → Improve
 Thanks for reading till the end! 🙏
 
 I hope this post helped you get a clearer picture of how LLMs actually work behind the scenes.
-We’re just getting started — in the upcoming posts, we’ll explore how these models are judged and improved.
+
+We’re just getting started! In the upcoming posts, we’ll explore how these models are judged and improved.
 
 **See you in the next post 👋**
