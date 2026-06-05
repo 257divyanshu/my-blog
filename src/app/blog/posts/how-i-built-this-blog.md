@@ -172,6 +172,4 @@ I’ll be writing about my learnings, projects, and experiments, from full-stack
 Thanks for visiting, and feel free to check out the code on
 [GitHub](https://github.com/257divyanshu/my-blog) or reach out if you’re building something similar!
 
----
-
 **See you in the next post 👋**
