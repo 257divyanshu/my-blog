@@ -6,7 +6,7 @@ description: A beginner-friendly introduction to containerization, why it exists
 
 A few days ago, I decided to add Redis to my backend development stack.
 
-While following a Redis course, my instructor asked us to set up Redis locally using containers. The setup itself was surprisingly simple. I installed the required tooling, used a configuration file, and within a few minutes I had a Redis instance running on my machine.
+While following a Redis playlist, my instructor asked us to set up Redis locally using containers. The setup itself was surprisingly simple. I installed the required tooling, used a configuration file, and within a few minutes I had a Redis instance running on my machine.
 
 The setup was easy.
 
